@@ -7,10 +7,12 @@ public class PlayerController : MonoBehaviour
     public GameObject newTail;
     public float speed;
     public List<GameObject> snakeTail = new List<GameObject>();
+    private LengthScore lengthBoard;
 
     private void Start()
     {
         snakeTail.Add(gameObject);
+        lengthBoard = FindObjectOfType<LengthScore>();
     }
 
     private void Update()
@@ -34,6 +36,8 @@ public class PlayerController : MonoBehaviour
 
     public void AddTail()
     {
+        lengthBoard.AddLengthScore();
+
         Vector3 newTailPos = snakeTail[snakeTail.Count - 1].transform.position;
 
         snakeTail.Add(Instantiate(newTail, newTailPos, Quaternion.identity));

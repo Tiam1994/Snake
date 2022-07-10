@@ -8,18 +8,21 @@ public class FoodCreation : MonoBehaviour
     private GameObject newFood;
     private float positionX = 8f;
     private float positionZ = 8f;
+    private float foodCreationTimer;
 
     private void Update()
     {
-        if(!newFood)
-        {
-            AddFood();
-        }
+        foodCreationTimer += Time.deltaTime;
+        AddFood();
     }
 
     private void AddFood()
     {
-        newFood = Instantiate(food, NewPosition(), Quaternion.identity);
+        if(foodCreationTimer >= 4f)
+        {
+            newFood = Instantiate(food, NewPosition(), Quaternion.identity);
+            foodCreationTimer = 0;
+        }
     }
 
     private Vector3 NewPosition()
