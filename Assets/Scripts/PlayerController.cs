@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
     public GameObject newTail;
     public float speed;
     public List<GameObject> snakeTail = new List<GameObject>();
+    public ParticleSystem bonusEffect;
+    public AudioSource bonusSound;
     private LengthScore lengthBoard;
 
     private void Start()
@@ -53,8 +55,12 @@ public class PlayerController : MonoBehaviour
         speed -= 0.5f;
     }
 
-    //public void ReturnNormalSpeed()
-    //{
-    //    speed = 3;
-    //}
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Food") || other.CompareTag("SpeedUp") || other.CompareTag("SlowDown"))
+        {
+            bonusEffect.Play();
+            bonusSound.Play();
+        }
+    }
 }
