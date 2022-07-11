@@ -5,19 +5,19 @@ using UnityEngine.UI;
 
 public class Score : MonoBehaviour
 {
-    private int score = 0;
-    private int scorePerEat = 5;
+    private int allScore = 0;
+    //private int scorePerEat = 5;
     private Text scoreText;
 
     private void Start()
     {
         scoreText = GetComponent<Text>();
-        scoreText.text = $"Score: {score}";
+        scoreText.text = $"Score: {allScore}";
     }
 
-    public void AddScore()
+    public void AddScore(int score)
     {
-        score += scorePerEat;
-        scoreText.text = $"Score: {score}";
+        allScore += score;
+        scoreText.text = $"Score: {allScore}";
     }
 }

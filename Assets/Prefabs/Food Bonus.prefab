@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 5517022393082269308}
   - component: {fileID: 751703001754365507}
   - component: {fileID: 8341557193710265016}
-  - component: {fileID: -7997415897545260162}
+  - component: {fileID: 5490416654151782369}
   m_Layer: 0
-  m_Name: Food
-  m_TagString: Untagged
+  m_Name: Food Bonus
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,7 +98,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-7997415897545260162
+--- !u!114 &5490416654151782369
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,6 +107,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6178786349875317631}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe07e6be7ddc957418364591d2a914c0, type: 3}
+  m_Script: {fileID: 11500000, guid: 74df1062e5cfe0e44b6decb7afe521a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

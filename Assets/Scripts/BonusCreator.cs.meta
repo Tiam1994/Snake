@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8bae4a8ae26e96743b5116c8ffd84c5a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - speedUpBonus: {fileID: 2159514297858507529, guid: ee7466b8a395e284292a3383b4fba03e, type: 3}
+  - speedDownBonus: {fileID: 2159514297858507529, guid: 5bf1650d0bdab3c46a1e0cd6c99eafdd, type: 3}
+  - foodBonus: {fileID: 6178786349875317631, guid: 82aa5245092c9f44da9ea30cfe977c3c, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

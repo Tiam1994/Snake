@@ -42,4 +42,19 @@ public class PlayerController : MonoBehaviour
 
         snakeTail.Add(Instantiate(newTail, newTailPos, Quaternion.identity));
     }
+
+    public void SpeedUp()
+    {
+        speed += 0.5f;
+    }
+
+    public void SpeedDown()
+    {
+        speed -= 0.5f;
+    }
+
+    //public void ReturnNormalSpeed()
+    //{
+    //    speed = 3;
+    //}
 }
