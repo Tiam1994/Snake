@@ -15,7 +15,7 @@ public class Bonuses : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if(gameObject.tag =="Food")
+            if(gameObject.tag == "Food")
             {
                 scoreBoard.AddScore(5);
                 other.GetComponent<PlayerController>().AddTail();

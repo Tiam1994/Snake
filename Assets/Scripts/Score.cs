@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class Score : MonoBehaviour
 {
     private int allScore = 0;
-    //private int scorePerEat = 5;
     private Text scoreText;
 
     private void Start()

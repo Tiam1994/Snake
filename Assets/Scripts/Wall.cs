@@ -5,11 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class Wall : MonoBehaviour
 {
+    private GameOver gameOver;
+
+    private void Start()
+    {
+        gameOver = FindObjectOfType<GameOver>();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Player"))
         {
-            SceneManager.LoadScene(0);
+            gameOver.GameOverPanel();
         }
     }
 }

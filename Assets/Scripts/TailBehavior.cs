@@ -10,6 +10,7 @@ public class TailBehavior : MonoBehaviour
     private PlayerController snake;
     private float speedTail;
     private int index;
+    private GameOver gameOver;
 
     private void Start()
     {
@@ -17,6 +18,8 @@ public class TailBehavior : MonoBehaviour
         speedTail = snake.speed;
         nextTailObj = snake.snakeTail[snake.snakeTail.Count - 2];
         index = snake.snakeTail.IndexOf(gameObject);
+
+        gameOver = FindObjectOfType<GameOver>();
     }
 
     private void Update()
@@ -28,11 +31,11 @@ public class TailBehavior : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
-            if(index > 1)
+            if (index > 1)
             {
-                SceneManager.LoadScene(0);
+                gameOver.GameOverPanel();
             }
         }
     }
